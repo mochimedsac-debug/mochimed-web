@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOCHIMED | Protección radiológica e ingeniería especializada</title>
+  <meta name="description" content="MOCHIMED brinda servicios especializados en protección radiológica, física médica e ingeniería aplicada al sector salud." />
+  <style>
+    :root {
+      --black: #050505;
+      --dark: #151515;
+      --gray: #5f6368;
+      --light: #f7f9fb;
+      --white: #ffffff;
+      --cyan: #00b8e6;
+      --yellow: #ffd400;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid #e9eef2;
+      backdrop-filter: blur(8px);
+    }
+
+    .container { width: min(1120px, 92%); margin: 0 auto; }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .logo-box {
+      width: 48px;
+      height: 48px;
+      border: 3px solid var(--black);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      color: var(--black);
+      background: linear-gradient(135deg, var(--yellow) 0 22%, var(--white) 22% 78%, var(--cyan) 78%);
+    }
+
+    .nav a {
+      color: var(--dark);
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 86px 0 70px;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(0,184,230,0.12), transparent 30%),
+        radial-gradient(circle at 85% 10%, rgba(255,212,0,0.16), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #f7fbfd 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--cyan);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 5vw, 64px);
+      line-height: 1.05;
+      color: var(--black);
+      margin-bottom: 22px;
+      letter-spacing: -1.5px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: var(--gray);
+      max-width: 680px;
+      margin-bottom: 30px;
+    }
+
+    .actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 800;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--black);
+      color: var(--white);
+      border: 2px solid var(--black);
+    }
+
+    .btn-secondary {
+      color: var(--black);
+      border: 2px solid var(--cyan);
+      background: var(--white);
+    }
+
+    .hero-card {
+      background: var(--black);
+      color: var(--white);
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.18);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 170px;
+      height: 170px;
+      background: var(--yellow);
+      clip-path: polygon(100% 0, 0 0, 100% 100%);
+      opacity: 0.9;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background: linear-gradient(90deg, var(--cyan), var(--yellow));
+    }
+
+    .hero-card h2 {
+      font-size: 28px;
+      margin-bottom: 14px;
+      position: relative;
+    }
+
+    .hero-card p {
+      color: #dce8ec;
+      font-size: 16px;
+      margin-bottom: 18px;
+      position: relative;
+    }
+
+    .badge-list { display: grid; gap: 12px; position: relative; }
+
+    .badge {
+      padding: 12px 14px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      font-weight: 700;
+    }
+
+    section { padding: 72px 0; }
+
+    .section-title { max-width: 780px; margin-bottom: 36px; }
+
+    .section-title h2 {
+      font-size: clamp(30px, 4vw, 44px);
+      color: var(--black);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .section-title p { color: var(--gray); font-size: 18px; }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid #e7edf1;
+      border-radius: 20px;
+      padding: 26px;
+      box-shadow: 0 10px 30px rgba(20, 40, 50, 0.06);
+    }
+
+    .card .icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--cyan), var(--yellow));
+      margin-bottom: 18px;
+    }
+
+    .card h3 { color: var(--black); font-size: 21px; margin-bottom: 10px; }
+    .card p { color: var(--gray); font-size: 15.5px; }
+
+    .about { background: var(--light); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 38px;
+      align-items: start;
+    }
+
+    .profile-box {
+      background: var(--white);
+      border-radius: 22px;
+      padding: 30px;
+      border: 1px solid #e7edf1;
+      box-shadow: 0 10px 30px rgba(20, 40, 50, 0.06);
+    }
+
+    .profile-box h3 { font-size: 25px; margin-bottom: 8px; }
+    .profile-box p { color: var(--gray); margin-bottom: 12px; }
+
+    .line {
+      height: 4px;
+      width: 100%;
+      background: linear-gradient(90deg, var(--cyan) 0 84%, var(--yellow) 84% 100%);
+      margin: 22px 0;
+      border-radius: 999px;
+    }
+
+    .list { display: grid; gap: 12px; color: var(--dark); }
+    .list li { margin-left: 18px; }
+
+    .contact { background: var(--black); color: var(--white); }
+
+    .contact .section-title h2,
+    .contact .section-title p { color: var(--white); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .contact-card {
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 18px;
+      padding: 22px;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .contact-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--cyan);
+    }
+
+    .contact-card a { color: var(--white); text-decoration: none; }
+
+    footer {
+      padding: 24px 0;
+      background: #000;
+      color: #bfc7ca;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid, .about-grid, .services, .contact-grid { grid-template-columns: 1fr; }
+      .nav { align-items: flex-start; gap: 12px; flex-direction: column; }
+      .nav a { margin-left: 0; margin-right: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo-box">MD</div>
+        <div>
+          <div>MOCHIMED</div>
+          <small>Protección radiológica e ingeniería especializada</small>
+        </div>
+      </div>
+      <nav>
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">MOCHIMED S.A.C.</div>
+          <h1>Protección radiológica e ingeniería para establecimientos de salud.</h1>
+          <p>
+            Brindamos soporte técnico y documentario en protección radiológica, física médica,
+            licencias IPEN, capacitaciones y diagnóstico de cumplimiento para servicios que utilizan radiación ionizante.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://wa.me/51906354043" target="_blank">Solicitar evaluación</a>
+            <a class="btn btn-secondary" href="#servicios">Ver servicios</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Soporte especializado</h2>
+          <p>Orientado a clínicas, centros médicos, servicios de diagnóstico por imágenes y medicina nuclear.</p>
+          <div class="badge-list">
+            <div class="badge">Programas de Protección Radiológica</div>
+            <div class="badge">Soporte regulatorio IPEN</div>
+            <div class="badge">Capacitaciones y gestión documentaria</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="container">
+        <div class="section-title">
+          <h2>Servicios principales</h2>
+          <p>Soluciones técnicas y documentarias para fortalecer la gestión de protección radiológica y preparación ante inspecciones.</p>
+        </div>
+        <div class="services">
+          <div class="card"><div class="icon"></div><h3>Programa de Protección Radiológica</h3><p>Elaboración o actualización para diagnóstico médico con rayos X y medicina nuclear, según el alcance del servicio.</p></div>
+          <div class="card"><div class="icon"></div><h3>Evaluación de cumplimiento</h3><p>Revisión documentaria y verificación referencial de licencias, señalización, dosimetría, EPP radiológico y registros.</p></div>
+          <div class="card"><div class="icon"></div><h3>Soporte regulatorio IPEN</h3><p>Organización de expedientes, revisión de requisitos, renovaciones, modificaciones y levantamiento de observaciones.</p></div>
+          <div class="card"><div class="icon"></div><h3>Capacitaciones</h3><p>Protección radiológica básica, uso de dosímetros, medios de protección y buenas prácticas para personal ocupacionalmente expuesto.</p></div>
+          <div class="card"><div class="icon"></div><h3>Física médica</h3><p>Soporte especializado en diagnóstico médico y medicina nuclear, de acuerdo con el alcance requerido por el establecimiento.</p></div>
+          <div class="card"><div class="icon"></div><h3>Ingeniería especializada</h3><p>Apoyo en revisión técnica documentaria, gestión de equipamiento médico y soporte técnico aplicado al sector salud.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros" class="about">
+      <div class="container about-grid">
+        <div class="section-title">
+          <h2>Experiencia técnica con enfoque regulatorio.</h2>
+          <p>MOCHIMED integra protección radiológica, física médica e ingeniería para brindar soluciones prácticas y ordenadas.</p>
+        </div>
+        <div class="profile-box">
+          <h3>Ing. Zintia Arqque Meza</h3>
+          <p>Gerente General de MOCHIMED S.A.C.</p>
+          <div class="line"></div>
+          <ul class="list">
+            <li>Ingeniera Electrónica colegiada.</li>
+            <li>OPR y Física Médica en Diagnóstico Médico y Medicina Nuclear.</li>
+            <li>Experiencia en protección radiológica, gestión documentaria, capacitaciones y preparación ante inspecciones.</li>
+            <li>Soporte técnico especializado para establecimientos de salud.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Solicita una evaluación inicial</h2>
+          <p>Atención previa coordinación para revisar el alcance del servicio y brindar una propuesta ajustada a las necesidades del establecimiento.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card"><strong>WhatsApp</strong><a href="https://wa.me/51906354043" target="_blank">+51 906 354 043</a></div>
+          <div class="contact-card"><strong>Correo</strong><a href="mailto:mochimedsac@gmail.com">mochimedsac@gmail.com</a></div>
+          <div class="contact-card"><strong>Web</strong><a href="https://www.mochimed.com.pe">www.mochimed.com.pe</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 MOCHIMED S.A.C. | Protección radiológica e ingeniería especializada</footer>
+</body>
+</html>
