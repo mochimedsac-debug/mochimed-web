@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MOCHIMED | Protección radiológica e ingeniería especializada</title>
-  <meta name="description" content="MOCHIMED brinda servicios especializados en protección radiológica, física médica, soporte regulatorio IPEN e ingeniería aplicada al sector salud.">
-  <link rel="icon" type="image/png" href="assets/mochimed-icon.png">
-
+  <meta name="description" content="MOCHIMED brinda servicios especializados en protección radiológica, física médica, soporte regulatorio IPEN e ingeniería aplicada al sector salud." />
+  <link rel="icon" type="image/png" href="assets/mochimed-icon.png" />
   <style>
     :root{
       --black:#0b0b0b;
-      --dark:#1a1a1a;
-      --gray:#5c6470;
-      --light:#f7f9fc;
+      --dark:#161616;
+      --gray:#5b6470;
+      --soft:#f6f9fb;
       --white:#ffffff;
-      --cyan:#12bdf0;
-      --cyan-soft:#ecf9ff;
+      --cyan:#13bce8;
+      --cyan-dark:#058caf;
       --yellow:#ffd400;
-      --line:#e6edf2;
-      --shadow:0 16px 34px rgba(20,40,50,.08);
-      --shadow-hover:0 26px 50px rgba(20,40,50,.16);
+      --line:#e4ebf0;
+      --shadow:0 14px 32px rgba(20,40,50,.08);
+      --shadow-hover:0 24px 48px rgba(20,40,50,.15);
     }
+
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
     body{
@@ -29,89 +29,137 @@
       background:var(--white);
       line-height:1.6;
     }
-    img{max-width:100%;display:block}
+    img{display:block;max-width:100%}
     a{text-decoration:none;color:inherit}
     .container{width:min(1180px,92%);margin:0 auto}
 
+    .accent-line{
+      height:5px;
+      background:linear-gradient(90deg,var(--black) 0 34%, var(--cyan) 34% 78%, var(--yellow) 78% 100%);
+    }
+
     header{
-      position:sticky;top:0;z-index:50;
-      background:rgba(255,255,255,.96);
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,255,255,.97);
       border-bottom:1px solid var(--line);
       backdrop-filter:blur(10px);
     }
     .nav{
       min-height:86px;
       display:flex;
-      align-items:center;
       justify-content:space-between;
+      align-items:center;
       gap:24px;
     }
-    .brand-logo{width:410px;max-width:62vw}
-    .menu{display:flex;gap:24px;align-items:center;font-weight:800}
-    .menu a{font-size:15px;color:var(--black)}
-    .nav-cta{
-      background:var(--black);
-      color:var(--white)!important;
-      padding:11px 16px;
+    .brand-logo{
+      width:390px;
+      max-width:62vw;
+    }
+    .menu{
+      display:flex;
+      align-items:center;
+      gap:22px;
+      font-weight:800;
+    }
+    .menu a{
+      font-size:15px;
+      color:var(--black);
+    }
+    .nav-btn{
+      border:2px solid var(--black);
       border-radius:999px;
+      padding:10px 16px;
+      background:var(--white);
+      transition:.22s ease;
+    }
+    .nav-btn:hover{
+      background:var(--black);
+      color:var(--white);
     }
 
     .hero{
-      padding:78px 0 76px;
-      background:
-        radial-gradient(circle at 0% 0%, rgba(18,189,240,.10), transparent 26%),
-        radial-gradient(circle at 100% 0%, rgba(255,212,0,.14), transparent 22%),
-        linear-gradient(90deg, #eefafe 0%, #ffffff 42%, #fffce8 100%);
-      overflow:hidden;
       position:relative;
+      overflow:hidden;
+      padding:74px 0 74px;
+      background:
+        linear-gradient(90deg, rgba(19,188,232,.09), transparent 36%),
+        linear-gradient(135deg, #ffffff 0%, #ffffff 58%, #fff8d7 100%);
     }
-    .hero::after{
+    .hero::before{
       content:"";
       position:absolute;
-      right:-100px; top:-70px;
-      width:250px; height:250px;
-      border:34px solid rgba(18,189,240,.08);
-      transform:rotate(45deg);
+      top:28px;
+      right:6%;
+      width:150px;
+      height:14px;
+      background:var(--yellow);
+      border-left:85px solid var(--black);
+      box-shadow:0 18px 0 var(--cyan);
+      opacity:.95;
     }
     .hero-grid{
       display:grid;
       grid-template-columns:1.05fr .95fr;
-      gap:42px;
+      gap:44px;
       align-items:center;
       position:relative;
       z-index:1;
     }
     .eyebrow{
-      color:#079ec7;
+      color:var(--cyan-dark);
       text-transform:uppercase;
       letter-spacing:4px;
-      font-size:13px;
       font-weight:900;
+      font-size:13px;
       margin-bottom:14px;
     }
     h1{
-      font-size:clamp(42px,5.6vw,68px);
+      font-size:clamp(42px,5.3vw,66px);
       line-height:1.02;
       letter-spacing:-2px;
-      margin-bottom:20px;
       color:var(--black);
+      margin-bottom:22px;
     }
-    .hero p{
-      color:var(--gray);
+    .hero-text{
       font-size:19px;
+      color:var(--gray);
       max-width:720px;
       margin-bottom:28px;
     }
-    .actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:24px}
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-bottom:25px;
+    }
     .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:14px 22px;border-radius:12px;font-weight:900;transition:.22s ease;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      padding:14px 22px;
+      font-weight:900;
+      transition:.22s ease;
     }
     .btn:hover{transform:translateY(-2px)}
-    .btn-primary{background:var(--black);color:var(--white);border:2px solid var(--black)}
-    .btn-primary:hover{box-shadow:0 16px 30px rgba(0,0,0,.18)}
-    .btn-secondary{background:var(--white);border:2px solid var(--cyan);color:var(--black)}
-    .pill-row{display:flex;flex-wrap:wrap;gap:12px}
+    .btn-primary{
+      background:var(--black);
+      color:var(--white);
+      border:2px solid var(--black);
+    }
+    .btn-primary:hover{box-shadow:0 14px 26px rgba(0,0,0,.18)}
+    .btn-secondary{
+      background:var(--white);
+      color:var(--black);
+      border:2px solid var(--cyan);
+    }
+    .pill-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
     .pill{
       background:var(--white);
       border:1px solid var(--line);
@@ -120,134 +168,122 @@
       font-size:14px;
       font-weight:700;
       color:var(--dark);
+      box-shadow:0 8px 18px rgba(20,40,50,.04);
     }
 
-    .hero-side{
-      display:grid;
-      gap:16px;
-    }
-    .hero-card{
-      background:var(--black);
-      color:var(--white);
-      border-radius:28px;
-      padding:30px;
-      box-shadow:var(--shadow-hover);
-      position:relative;
-      overflow:hidden;
-      transform-style:preserve-3d;
-      transition:transform .25s ease, box-shadow .25s ease;
-    }
-    .hero-card:hover{
-      transform:translateY(-6px) rotateX(1deg) rotateY(-1deg);
-      box-shadow:0 30px 56px rgba(0,0,0,.24);
-    }
-    .hero-card::before{
-      content:"";
-      position:absolute;top:0;right:0;
-      width:165px;height:165px;
-      background:var(--yellow);
-      clip-path:polygon(100% 0, 0 0, 100% 100%);
-    }
-    .hero-card::after{
-      content:"";
-      position:absolute;left:0;bottom:0;width:100%;height:8px;
-      background:linear-gradient(90deg,var(--cyan),var(--yellow));
-    }
-    .hero-card > *{position:relative;z-index:1}
-    .hero-card h2{font-size:28px;margin-bottom:10px}
-    .hero-card p{color:#d8e8ed;font-size:16px;margin-bottom:18px}
-    .mini-list{display:grid;gap:10px}
-    .mini-item{
-      background:rgba(255,255,255,.08);
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:14px;
-      padding:12px 14px;
-      font-weight:800;
-      transition:.2s ease;
-    }
-    .mini-item:hover{transform:translateX(4px);background:rgba(255,255,255,.12)}
-
-    .hero-photo{
-      border-radius:24px;
-      overflow:hidden;
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
+    .hero-visual{
       background:var(--white);
-      transition:transform .25s ease, box-shadow .25s ease;
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:16px;
+      box-shadow:var(--shadow);
+      position:relative;
     }
-    .hero-photo:hover{
-      transform:translateY(-5px);
-      box-shadow:var(--shadow-hover);
+    .hero-visual::before{
+      content:"";
+      position:absolute;
+      top:-16px;
+      left:28px;
+      width:130px;
+      height:10px;
+      background:var(--black);
     }
-    .hero-photo img{
-      width:100%;height:280px;object-fit:cover;
+    .hero-visual::after{
+      content:"";
+      position:absolute;
+      top:-16px;
+      left:158px;
+      width:70px;
+      height:10px;
+      background:var(--yellow);
+    }
+    .hero-visual img{
+      width:100%;
+      height:360px;
+      object-fit:cover;
+      border-radius:20px;
       transition:transform .35s ease;
     }
-    .hero-photo:hover img{transform:scale(1.05)}
-    .hero-photo .caption{
-      padding:14px 16px;
-      font-size:14px;
+    .hero-visual:hover img{transform:scale(1.03)}
+    .hero-caption{
+      padding:16px 6px 2px;
+      display:grid;
+      gap:10px;
+    }
+    .hero-caption h2{
+      font-size:27px;
+      line-height:1.15;
+      color:var(--black);
+    }
+    .hero-caption p{
       color:var(--gray);
-      font-weight:700;
-      background:var(--white);
+      font-size:16px;
     }
 
-    section{padding:82px 0}
-    .section-head{max-width:840px;margin-bottom:38px}
+    section{padding:80px 0}
+    .section-head{
+      max-width:850px;
+      margin-bottom:38px;
+    }
     .section-tag{
-      color:#079ec7;
+      color:var(--cyan-dark);
       text-transform:uppercase;
       letter-spacing:3px;
-      font-size:12px;
       font-weight:900;
+      font-size:12px;
       margin-bottom:10px;
     }
     .section-head h2{
       font-size:clamp(31px,4vw,46px);
       line-height:1.12;
       letter-spacing:-.9px;
-      margin-bottom:12px;
       color:var(--black);
+      margin-bottom:12px;
     }
     .section-head p{
       color:var(--gray);
       font-size:18px;
     }
 
-    .about-grid{
+    .intro-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:22px;
     }
-    .about-card{
+    .intro-card{
       background:var(--white);
       border:1px solid var(--line);
       border-radius:24px;
       padding:28px;
       box-shadow:var(--shadow);
-      transition:.24s ease;
-    }
-    .about-card:hover{
-      transform:translateY(-6px);
-      box-shadow:var(--shadow-hover);
-    }
-    .about-card.highlight{
-      background:linear-gradient(180deg,var(--black) 0%,#151515 100%);
-      color:var(--white);
       position:relative;
       overflow:hidden;
+      transition:.22s ease;
     }
-    .about-card.highlight::after{
+    .intro-card:hover{
+      transform:translateY(-5px);
+      box-shadow:var(--shadow-hover);
+    }
+    .intro-card::before{
       content:"";
-      position:absolute;right:0;bottom:0;width:130px;height:130px;
-      background:var(--yellow);
-      clip-path:polygon(100% 100%,0 100%,100% 0);
+      display:block;
+      width:130px;
+      height:6px;
+      background:linear-gradient(90deg,var(--black) 0 46%, var(--cyan) 46% 76%, var(--yellow) 76% 100%);
+      margin-bottom:22px;
     }
-    .about-card h3{font-size:25px;margin-bottom:10px;position:relative;z-index:1}
-    .about-card p{color:var(--gray);position:relative;z-index:1}
-    .about-card.highlight p{color:#dce8ec}
+    .intro-card h3{
+      font-size:25px;
+      color:var(--black);
+      margin-bottom:10px;
+    }
+    .intro-card p{
+      color:var(--gray);
+    }
 
-    .services-wrap{background:var(--light)}
+    .solutions{
+      background:var(--soft);
+    }
     .services-grid{
       display:grid;
       grid-template-columns:repeat(4,1fr);
@@ -259,50 +295,78 @@
       border-radius:22px;
       overflow:hidden;
       box-shadow:var(--shadow);
-      transition:transform .24s ease, box-shadow .24s ease;
+      transition:.24s ease;
     }
     .service-card:hover{
       transform:translateY(-8px);
       box-shadow:var(--shadow-hover);
     }
-    .service-image{overflow:hidden}
+    .service-image{
+      overflow:hidden;
+      border-bottom:4px solid transparent;
+      border-image:linear-gradient(90deg,var(--black),var(--cyan),var(--yellow)) 1;
+    }
     .service-image img{
-      width:100%;height:190px;object-fit:cover;
-      transition:transform .35s ease;
+      width:100%;
+      height:190px;
+      object-fit:cover;
+      transition:transform .4s ease;
     }
     .service-card:hover .service-image img{transform:scale(1.08)}
-    .service-body{padding:20px}
-    .service-body h3{font-size:20px;line-height:1.2;margin-bottom:10px;color:var(--black)}
-    .service-body p{font-size:15px;color:var(--gray)}
-
-    .why-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:18px;
+    .service-body{
+      padding:20px;
     }
-    .why-card{
-      border-top:6px solid var(--cyan);
-      background:var(--white);
-      border-radius:18px;
-      padding:22px;
-      box-shadow:var(--shadow);
-      transition:.24s ease;
-    }
-    .why-card:hover{
-      transform:translateY(-6px);
-      box-shadow:var(--shadow-hover);
-      border-top-color:var(--yellow);
-    }
-    .why-card strong{
-      display:block;
-      font-size:18px;
-      margin-bottom:8px;
+    .service-body h3{
+      font-size:20px;
+      line-height:1.2;
       color:var(--black);
+      margin-bottom:10px;
     }
-    .why-card p{font-size:14.5px;color:var(--gray)}
+    .service-body p{
+      font-size:15px;
+      color:var(--gray);
+    }
+
+    .risk-grid{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:16px;
+    }
+    .risk-card{
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:20px;
+      background:var(--white);
+      box-shadow:var(--shadow);
+      transition:.22s ease;
+      position:relative;
+    }
+    .risk-card:hover{
+      transform:translateY(-5px);
+      box-shadow:var(--shadow-hover);
+    }
+    .risk-card::before{
+      content:"";
+      display:block;
+      width:56px;
+      height:5px;
+      background:var(--yellow);
+      border-left:34px solid var(--black);
+      margin-bottom:16px;
+    }
+    .risk-card strong{
+      display:block;
+      font-size:17px;
+      color:var(--black);
+      margin-bottom:7px;
+    }
+    .risk-card p{
+      font-size:14px;
+      color:var(--gray);
+    }
 
     .gallery{
-      background:linear-gradient(180deg,#ffffff 0%, #f8fbfd 100%);
+      background:linear-gradient(180deg,#fff 0%,#f7fbfd 100%);
     }
     .gallery-grid{
       display:grid;
@@ -311,94 +375,148 @@
     }
     .gallery-item{
       position:relative;
-      overflow:hidden;
       border-radius:22px;
-      box-shadow:var(--shadow);
-      background:var(--white);
+      overflow:hidden;
       border:1px solid var(--line);
-      transition:transform .25s ease, box-shadow .25s ease;
+      box-shadow:var(--shadow);
+      transition:.25s ease;
+      background:var(--white);
     }
     .gallery-item:hover{
       transform:translateY(-8px);
       box-shadow:var(--shadow-hover);
     }
     .gallery-item img{
-      width:100%;height:225px;object-fit:cover;
+      width:100%;
+      height:225px;
+      object-fit:cover;
       transition:transform .42s ease;
     }
     .gallery-item:hover img{transform:scale(1.08)}
     .gallery-overlay{
-      position:absolute;inset:auto 0 0 0;
+      position:absolute;
+      inset:auto 0 0 0;
       background:linear-gradient(180deg, transparent, rgba(0,0,0,.78));
       color:var(--white);
-      padding:38px 18px 16px;
+      padding:42px 18px 16px;
     }
-    .gallery-overlay strong{display:block;font-size:17px;margin-bottom:4px}
-    .gallery-overlay span{font-size:13px;color:#dce8ec}
+    .gallery-overlay strong{
+      display:block;
+      font-size:17px;
+      margin-bottom:4px;
+    }
+    .gallery-overlay span{
+      font-size:13px;
+      color:#dce8ec;
+    }
 
-    .profile{
-      background:linear-gradient(90deg, rgba(18,189,240,.07), rgba(255,255,255,1));
+    .support{
+      background:var(--white);
     }
-    .profile-grid{
+    .support-grid{
       display:grid;
       grid-template-columns:.95fr 1.05fr;
       gap:26px;
       align-items:stretch;
     }
-    .profile-left{
+    .support-card{
+      border:1px solid var(--line);
       border-radius:28px;
-      background:linear-gradient(180deg,var(--black) 0%,#171717 100%);
-      color:var(--white);
-      padding:28px;
+      padding:30px;
+      background:var(--white);
+      box-shadow:var(--shadow);
       position:relative;
       overflow:hidden;
+    }
+    .support-card.logo-card{
       display:flex;
       flex-direction:column;
       justify-content:center;
-      box-shadow:var(--shadow-hover);
-      transition:transform .25s ease;
+      align-items:flex-start;
+      gap:18px;
     }
-    .profile-left:hover{transform:translateY(-5px)}
-    .profile-left::before{
+    .support-card.logo-card::before{
       content:"";
-      position:absolute;top:0;right:0;width:132px;height:132px;
-      background:var(--yellow);
-      clip-path:polygon(100% 0,0 0,100% 100%);
+      position:absolute;
+      top:0;
+      right:0;
+      width:160px;
+      height:10px;
+      background:linear-gradient(90deg,var(--black),var(--cyan),var(--yellow));
     }
-    .profile-left img{
-      width:96px;background:var(--white);padding:10px;border-radius:18px;
-      margin-bottom:22px;position:relative;z-index:1;
-    }
-    .profile-left h3,.profile-left p{position:relative;z-index:1}
-    .profile-left h3{font-size:34px;margin-bottom:6px}
-    .profile-left p{color:#dce8ec;font-size:17px}
-
-    .profile-right{
+    .support-card.logo-card img{
+      width:118px;
       background:var(--white);
       border:1px solid var(--line);
-      border-radius:28px;
-      padding:30px 34px;
-      box-shadow:var(--shadow);
+      border-radius:20px;
+      padding:10px;
     }
-    .profile-right p{font-size:17px;color:var(--gray);margin:10px 0 20px}
-    .profile-right ul{display:grid;gap:12px;margin-left:22px;font-size:16px}
+    .support-card h3{
+      font-size:30px;
+      line-height:1.16;
+      color:var(--black);
+    }
+    .support-card p{
+      color:var(--gray);
+      font-size:17px;
+    }
+    .license-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-top:20px;
+    }
+    .license{
+      padding:13px 14px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      font-weight:800;
+      background:#fff;
+      color:var(--dark);
+      transition:.2s ease;
+    }
+    .license:hover{
+      border-color:var(--cyan);
+      transform:translateY(-3px);
+    }
+    .support-note{
+      color:var(--gray);
+      font-size:14px;
+      margin-top:16px;
+    }
 
     .cta{
       background:var(--black);
       color:var(--white);
+      position:relative;
+      overflow:hidden;
+    }
+    .cta::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:7px;
+      background:linear-gradient(90deg,var(--cyan),var(--yellow));
     }
     .cta-grid{
       display:grid;
       grid-template-columns:1.1fr .9fr;
       gap:28px;
       align-items:center;
+      position:relative;
+      z-index:1;
     }
     .cta h2{
       font-size:clamp(30px,4vw,46px);
       line-height:1.12;
       margin-bottom:12px;
     }
-    .cta p{font-size:18px;color:#dce8ec}
+    .cta p{
+      color:#dce8ec;
+      font-size:18px;
+    }
     .contact-box{
       background:rgba(255,255,255,.06);
       border:1px solid rgba(255,255,255,.15);
@@ -406,11 +524,10 @@
       padding:24px;
       display:grid;
       gap:14px;
-      box-shadow:0 18px 38px rgba(0,0,0,.18);
     }
     .contact-item strong{
-      display:block;
       color:var(--cyan);
+      display:block;
       margin-bottom:3px;
     }
     .contact-item a,.contact-item span{
@@ -422,7 +539,8 @@
       position:fixed;
       right:20px;
       bottom:20px;
-      width:60px;height:60px;
+      width:60px;
+      height:60px;
       border-radius:50%;
       background:#25d366;
       color:#fff;
@@ -432,9 +550,12 @@
       font-size:28px;
       box-shadow:0 14px 26px rgba(0,0,0,.22);
       z-index:60;
-      transition:transform .2s ease;
+      transition:.2s ease;
     }
-    .floating-whatsapp:hover{transform:scale(1.08)}
+    .floating-whatsapp:hover{
+      transform:scale(1.08);
+    }
+
     footer{
       background:#000;
       color:#bfc7ca;
@@ -443,36 +564,38 @@
       font-size:14px;
     }
 
-    @media (max-width: 1080px){
+    @media(max-width:1080px){
       .services-grid,.gallery-grid{grid-template-columns:repeat(2,1fr)}
+      .risk-grid{grid-template-columns:repeat(2,1fr)}
     }
-    @media (max-width: 980px){
+    @media(max-width:980px){
       .nav{flex-direction:column;align-items:flex-start;padding:14px 0 18px}
       .menu{flex-wrap:wrap;gap:14px}
-      .hero-grid,.about-grid,.profile-grid,.cta-grid{grid-template-columns:1fr}
-      .why-grid{grid-template-columns:1fr 1fr}
+      .hero-grid,.intro-grid,.support-grid,.cta-grid{grid-template-columns:1fr}
       .brand-logo{width:300px}
     }
-    @media (max-width: 620px){
-      .services-grid,.gallery-grid,.why-grid{grid-template-columns:1fr}
-      h1{font-size:40px}
+    @media(max-width:620px){
+      .services-grid,.gallery-grid,.risk-grid,.license-grid{grid-template-columns:1fr}
       .brand-logo{width:250px}
-      .hero{padding-top:56px}
+      h1{font-size:40px}
+      .hero{padding-top:58px}
     }
   </style>
 </head>
+
 <body>
+  <div class="accent-line"></div>
   <header>
     <div class="container nav">
       <a href="#" aria-label="MOCHIMED">
         <img class="brand-logo" src="assets/mochimed-logo.png" alt="MOCHIMED - Protección radiológica e ingeniería especializada">
       </a>
       <nav class="menu">
-        <a href="#conocenos">Conócenos</a>
         <a href="#servicios">Servicios</a>
+        <a href="#riesgos">Cumplimiento</a>
         <a href="#galeria">Galería</a>
-        <a href="#perfil">Perfil</a>
-        <a class="nav-cta" href="#contacto">Contacto</a>
+        <a href="#respaldo">Respaldo</a>
+        <a class="nav-btn" href="#contacto">Contacto</a>
       </nav>
     </div>
   </header>
@@ -482,33 +605,28 @@
       <div class="container hero-grid">
         <div>
           <div class="eyebrow">MOCHIMED S.A.C.</div>
-          <h1>Protección radiológica, física médica e ingeniería especializada.</h1>
-          <p>Brindamos soporte técnico y regulatorio a establecimientos de salud que utilizan radiación ionizante, con un enfoque práctico, documentario y orientado al cumplimiento.</p>
+          <h1>Protección radiológica que respalda el cumplimiento de tu establecimiento de salud.</h1>
+          <p class="hero-text">
+            Soporte técnico y regulatorio para servicios que utilizan radiación ionizante, con enfoque práctico,
+            documentario y orientado a inspecciones, auditorías y mejora continua.
+          </p>
           <div class="actions">
-            <a class="btn btn-primary" href="https://wa.me/51906354043?text=Hola%20MOCHIMED%2C%20quisiera%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank">Solicitar asesoría técnica</a>
+            <a class="btn btn-primary" href="https://wa.me/51906354043?text=Hola%20MOCHIMED%2C%20quisiera%20solicitar%20asesor%C3%ADa%20t%C3%A9cnica." target="_blank">Solicitar asesoría técnica</a>
             <a class="btn btn-secondary" href="#servicios">Ver servicios</a>
           </div>
           <div class="pill-row">
             <span class="pill">Diagnóstico médico</span>
             <span class="pill">Medicina nuclear</span>
-            <span class="pill">Señalización y seguridad</span>
             <span class="pill">Soporte IPEN</span>
+            <span class="pill">Capacitaciones</span>
           </div>
         </div>
 
-        <div class="hero-side">
-          <div class="hero-card">
-            <h2>Soluciones para servicios con radiación ionizante</h2>
-            <p>Apoyo especializado para ordenar documentación, fortalecer la gestión de protección radiológica y prepararse ante inspecciones.</p>
-            <div class="mini-list">
-              <div class="mini-item">Programas de Protección Radiológica</div>
-              <div class="mini-item">Diagnóstico de cumplimiento</div>
-              <div class="mini-item">Capacitaciones y soporte documentario</div>
-            </div>
-          </div>
-          <div class="hero-photo">
-            <img src="assets/ingenieria.jpg" alt="Acceso a sala con señalización radiológica">
-            <div class="caption">Referencia visual de acceso controlado, señalización y adecuación técnica.</div>
+        <div class="hero-visual">
+          <img src="assets/senalizacion.jpg" alt="Señalización y protección radiológica">
+          <div class="hero-caption">
+            <h2>Gestión radiológica ordenada, visible y documentada.</h2>
+            <p>Apoyamos en la organización técnica y documentaria para fortalecer la seguridad radiológica del servicio.</p>
           </div>
         </div>
       </div>
@@ -518,29 +636,30 @@
       <div class="container">
         <div class="section-head">
           <div class="section-tag">Conócenos</div>
-          <h2>Una empresa orientada a seguridad, cumplimiento y gestión radiológica.</h2>
-          <p>MOCHIMED nace para brindar soporte especializado a clínicas, centros médicos y servicios que requieren fortalecer y ordenar su gestión de protección radiológica.</p>
+          <h2>Una empresa técnica orientada a seguridad, cumplimiento y gestión radiológica.</h2>
+          <p>MOCHIMED integra protección radiológica, física médica e ingeniería aplicada para brindar soporte especializado a clínicas, centros médicos y servicios con radiación ionizante.</p>
         </div>
 
-        <div class="about-grid">
-          <div class="about-card highlight">
+        <div class="intro-grid">
+          <article class="intro-card">
             <h3>Qué hacemos</h3>
-            <p>Integramos protección radiológica, física médica e ingeniería aplicada para ofrecer soluciones documentarias, técnicas y regulatorias adaptadas al alcance real de cada establecimiento.</p>
-          </div>
-          <div class="about-card">
+            <p>Elaboramos y ordenamos documentación técnica, revisamos evidencias, orientamos acciones de mejora y brindamos soporte para una gestión radiológica más clara y trazable.</p>
+          </article>
+
+          <article class="intro-card">
             <h3>Nuestro enfoque</h3>
-            <p>No solo elaboramos documentos. Ayudamos a identificar brechas, organizar evidencias, revisar condiciones visibles y orientar acciones de mejora para auditorías, inspecciones o revisiones internas.</p>
-          </div>
+            <p>No vendemos solo documentos. Buscamos que el establecimiento tenga una base técnica coherente, útil y preparada para auditorías, inspecciones o revisiones internas.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="servicios" class="services-wrap">
+    <section id="servicios" class="solutions">
       <div class="container">
         <div class="section-head">
           <div class="section-tag">Servicios</div>
-          <h2>Servicios principales de MOCHIMED</h2>
-          <p>Soporte técnico y documentario para diagnóstico médico, medicina nuclear y gestión especializada en salud, ahora con una presentación visual más dinámica.</p>
+          <h2>Soluciones técnicas para establecimientos de salud</h2>
+          <p>Servicios iniciales de MOCHIMED para diagnóstico médico, medicina nuclear, soporte regulatorio y gestión documentaria.</p>
         </div>
 
         <div class="services-grid">
@@ -548,80 +667,70 @@
             <div class="service-image"><img src="assets/diagnostico.jpg" alt="Diagnóstico médico"></div>
             <div class="service-body">
               <h3>Protección radiológica en diagnóstico médico</h3>
-              <p>Apoyo para servicios de rayos X, intervencionismo, tomografía, mamografía y otros equipos emisores de radiación ionizante.</p>
+              <p>Apoyo para servicios de rayos X, intervencionismo, tomografía, mamografía y equipos emisores de radiación ionizante.</p>
             </div>
           </article>
 
           <article class="service-card">
-            <div class="service-image"><img src="assets/medicina_nuclear.jpg" alt="Medicina nuclear"></div>
+            <div class="service-image"><img src="assets/medicina-nuclear.jpg" alt="Medicina nuclear"></div>
             <div class="service-body">
               <h3>Protección radiológica en medicina nuclear</h3>
-              <p>Soporte técnico-documentario para servicios con radiofármacos, procedimientos y organización de evidencias regulatorias.</p>
+              <p>Soporte técnico-documentario para servicios con radiofármacos, procedimientos y evidencias regulatorias.</p>
             </div>
           </article>
 
           <article class="service-card">
-            <div class="service-image"><img src="assets/senalizacion.jpg" alt="Señalización radiológica"></div>
+            <div class="service-image"><img src="assets/gestion-documentaria.jpg" alt="Gestión documentaria"></div>
             <div class="service-body">
-              <h3>Señalización y seguridad radiológica</h3>
-              <p>Orientación para señalización de áreas supervisadas, áreas controladas y medidas de protección visibles en el servicio.</p>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-image"><img src="assets/gestion_documentaria.jpg" alt="Gestión documentaria"></div>
-            <div class="service-body">
-              <h3>Gestión documentaria y soporte IPEN</h3>
-              <p>Organización de expedientes, revisión de requisitos, soporte en renovaciones, modificaciones y levantamiento de observaciones.</p>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-image"><img src="assets/dosimetria.jpg" alt="Dosimetría personal"></div>
-            <div class="service-body">
-              <h3>Dosimetría personal y seguimiento</h3>
-              <p>Apoyo técnico relacionado con monitoreo ocupacional, trazabilidad y buenas prácticas de seguridad del personal.</p>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-image"><img src="assets/ingenieria.jpg" alt="Ingeniería especializada"></div>
-            <div class="service-body">
-              <h3>Ingeniería especializada</h3>
-              <p>Revisión técnica documentaria, adecuación visible de instalaciones radiológicas y recomendaciones aplicadas al servicio.</p>
+              <h3>Programas y soporte regulatorio IPEN</h3>
+              <p>Programas de Protección Radiológica, expedientes, renovaciones, modificaciones y levantamiento de observaciones.</p>
             </div>
           </article>
 
           <article class="service-card">
             <div class="service-image"><img src="assets/capacitaciones.jpg" alt="Capacitaciones"></div>
             <div class="service-body">
-              <h3>Capacitaciones</h3>
-              <p>Charlas virtuales o presenciales sobre protección radiológica, uso de dosímetros, medios de protección y buenas prácticas.</p>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-image"><img src="assets/asesoria.jpg" alt="Asesoría y soporte"></div>
-            <div class="service-body">
-              <h3>Asesoría y soporte técnico</h3>
-              <p>Acompañamiento técnico y regulatorio para inspecciones, auditorías, brechas documentarias y mejora de cumplimiento.</p>
+              <h3>Capacitaciones en protección radiológica</h3>
+              <p>Formación en principios de protección radiológica, uso de dosímetros, medios de protección y buenas prácticas.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section>
+    <section id="riesgos">
       <div class="container">
         <div class="section-head">
-          <div class="section-tag">Por qué MOCHIMED</div>
-          <h2>Un enfoque técnico, práctico y ordenado.</h2>
+          <div class="section-tag">Cumplimiento</div>
+          <h2>Ayudamos a prevenir observaciones técnicas, regulatorias y documentarias</h2>
+          <p>Una gestión radiológica ordenada reduce brechas, mejora la trazabilidad y facilita la preparación ante inspecciones.</p>
         </div>
-        <div class="why-grid">
-          <div class="why-card"><strong>Enfoque regulatorio</strong><p>Orientamos la documentación hacia cumplimiento, trazabilidad y preparación ante inspecciones.</p></div>
-          <div class="why-card"><strong>Experiencia especializada</strong><p>Conocimiento en diagnóstico médico, medicina nuclear, física médica e ingeniería aplicada.</p></div>
-          <div class="why-card"><strong>Gestión documentaria</strong><p>Organización de registros, evidencias, formatos, planes y programas según necesidad del servicio.</p></div>
-          <div class="why-card"><strong>Acompañamiento técnico</strong><p>Recomendaciones prácticas y realistas para fortalecer la gestión de protección radiológica.</p></div>
+
+        <div class="risk-grid">
+          <article class="risk-card">
+            <strong>Documentación incompleta</strong>
+            <p>Organización de registros, formatos, evidencias y procedimientos requeridos por el servicio.</p>
+          </article>
+
+          <article class="risk-card">
+            <strong>Señalización insuficiente</strong>
+            <p>Revisión referencial de áreas controladas, supervisadas y condiciones visibles de seguridad.</p>
+          </article>
+
+          <article class="risk-card">
+            <strong>Dosimetría sin trazabilidad</strong>
+            <p>Apoyo en ordenamiento documentario y seguimiento de monitoreo ocupacional.</p>
+          </article>
+
+          <article class="risk-card">
+            <strong>Capacitaciones pendientes</strong>
+            <p>Charlas técnicas adaptadas al personal y al tipo de práctica radiológica.</p>
+          </article>
+
+          <article class="risk-card">
+            <strong>Expedientes desordenados</strong>
+            <p>Soporte para preparar documentación ante renovaciones, modificaciones u observaciones regulatorias.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -630,73 +739,54 @@
       <div class="container">
         <div class="section-head">
           <div class="section-tag">Galería referencial</div>
-          <h2>Imágenes asociadas a la operación y al soporte que brinda MOCHIMED</h2>
-          <p>Al pasar el puntero, las imágenes se elevan y hacen zoom suave, dando una experiencia más dinámica y profesional.</p>
+          <h2>Áreas de intervención y soporte especializado</h2>
+          <p>Imágenes referenciales asociadas a la operación, seguridad radiológica, documentación y asesoría técnica.</p>
         </div>
 
         <div class="gallery-grid">
           <article class="gallery-item">
-            <img src="assets/diagnostico.jpg" alt="Entorno de diagnóstico médico">
-            <div class="gallery-overlay"><strong>Diagnóstico médico</strong><span>Entornos de rayos X, tomografía y servicios por imágenes.</span></div>
+            <img src="assets/diagnostico.jpg" alt="Diagnóstico médico">
+            <div class="gallery-overlay"><strong>Diagnóstico médico</strong><span>Rayos X, tomografía y procedimientos por imágenes.</span></div>
           </article>
-
-          <article class="gallery-item">
-            <img src="assets/medicina_nuclear.jpg" alt="Preparación en medicina nuclear">
-            <div class="gallery-overlay"><strong>Medicina nuclear</strong><span>Preparación, control y manejo de radiofármacos.</span></div>
-          </article>
-
           <article class="gallery-item">
             <img src="assets/senalizacion.jpg" alt="Señalización radiológica">
-            <div class="gallery-overlay"><strong>Protección radiológica</strong><span>Señalización y seguridad de áreas controladas y supervisadas.</span></div>
+            <div class="gallery-overlay"><strong>Señalización radiológica</strong><span>Áreas controladas, supervisadas y restricciones.</span></div>
           </article>
-
-          <article class="gallery-item">
-            <img src="assets/gestion_documentaria.jpg" alt="Gestión documentaria">
-            <div class="gallery-overlay"><strong>Gestión documentaria</strong><span>Procedimientos, registros, informes y cumplimiento.</span></div>
-          </article>
-
           <article class="gallery-item">
             <img src="assets/dosimetria.jpg" alt="Dosimetría personal">
-            <div class="gallery-overlay"><strong>Dosimetría personal</strong><span>Monitoreo ocupacional y seguridad del personal.</span></div>
+            <div class="gallery-overlay"><strong>Dosimetría personal</strong><span>Monitoreo ocupacional y trazabilidad del personal.</span></div>
           </article>
-
           <article class="gallery-item">
-            <img src="assets/ingenieria.jpg" alt="Ingeniería especializada">
-            <div class="gallery-overlay"><strong>Ingeniería especializada</strong><span>Adecuación de accesos, seguridad y soporte técnico.</span></div>
-          </article>
-
-          <article class="gallery-item">
-            <img src="assets/capacitaciones.jpg" alt="Capacitaciones">
-            <div class="gallery-overlay"><strong>Capacitaciones</strong><span>Formación técnica en protección radiológica y normativas.</span></div>
-          </article>
-
-          <article class="gallery-item">
-            <img src="assets/asesoria.jpg" alt="Asesoría y soporte">
-            <div class="gallery-overlay"><strong>Asesoría y soporte</strong><span>Acompañamiento técnico para inspecciones y auditorías.</span></div>
+            <img src="assets/asesoria.jpg" alt="Asesoría técnica">
+            <div class="gallery-overlay"><strong>Asesoría técnica</strong><span>Acompañamiento ante auditorías, inspecciones y mejoras.</span></div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="perfil" class="profile">
-      <div class="container profile-grid">
-        <div class="profile-left">
+    <section id="respaldo" class="support">
+      <div class="container support-grid">
+        <article class="support-card logo-card">
           <img src="assets/mochimed-icon.png" alt="Emblema MOCHIMED">
-          <h3>MOCHIMED</h3>
-          <p>Protección radiológica e ingeniería especializada</p>
-        </div>
+          <h3>Respaldo técnico especializado</h3>
+          <p>MOCHIMED cuenta con dirección técnica a cargo de profesional colegiada con licencias IPEN y experiencia en protección radiológica, física médica, gestión documentaria e ingeniería aplicada al sector salud.</p>
+        </article>
 
-        <div class="profile-right">
-          <div class="section-tag">Perfil profesional</div>
-          <h2>Ing. Zintia Arqque Meza</h2>
-          <p>Gerente General de MOCHIMED S.A.C., Ingeniera Electrónica colegiada, con formación y experiencia en protección radiológica, física médica, gestión documentaria y soporte regulatorio para establecimientos de salud.</p>
-          <ul>
-            <li>OPR en Diagnóstico Médico y Medicina Nuclear.</li>
-            <li>Física Médica en Diagnóstico Médico y Medicina Nuclear.</li>
-            <li>Experiencia en Programas de Protección Radiológica, capacitaciones, control documentario y preparación ante inspecciones.</li>
-            <li>Enfoque integral entre ingeniería, seguridad radiológica y cumplimiento regulatorio.</li>
-          </ul>
-        </div>
+        <article class="support-card">
+          <div class="section-tag">Respaldo profesional</div>
+          <h3>Competencias principales</h3>
+          <div class="license-grid">
+            <div class="license">OPR en Diagnóstico Médico</div>
+            <div class="license">OPR en Medicina Nuclear</div>
+            <div class="license">Física Médica en Diagnóstico Médico</div>
+            <div class="license">Física Médica en Medicina Nuclear</div>
+            <div class="license">Control de calidad de equipos RX</div>
+            <div class="license">Instalación y mantenimiento RX</div>
+            <div class="license">Cultura de seguridad</div>
+            <div class="license">Gestión de equipamiento biomédico</div>
+          </div>
+          <p class="support-note">El detalle documentario y credenciales específicas puede ser presentado en propuestas formales o reuniones técnicas, según corresponda.</p>
+        </article>
       </div>
     </section>
 
@@ -706,6 +796,7 @@
           <h2>Solicita una evaluación inicial</h2>
           <p>Coordinemos una revisión del alcance de tu servicio para identificar necesidades, documentación requerida y oportunidades de mejora.</p>
         </div>
+
         <div class="contact-box">
           <div class="contact-item"><strong>WhatsApp</strong><a href="https://wa.me/51906354043?text=Hola%20MOCHIMED%2C%20quisiera%20solicitar%20una%20evaluaci%C3%B3n%20inicial." target="_blank">+51 906 354 043</a></div>
           <div class="contact-item"><strong>Correo</strong><a href="mailto:mochimedsac@gmail.com">mochimedsac@gmail.com</a></div>
@@ -716,7 +807,7 @@
     </section>
   </main>
 
-  <a class="floating-whatsapp" href="https://wa.me/51906354043?text=Hola%20MOCHIMED%2C%20quisiera%20información." target="_blank" aria-label="WhatsApp">✆</a>
+  <a class="floating-whatsapp" href="https://wa.me/51906354043?text=Hola%20MOCHIMED%2C%20quisiera%20informaci%C3%B3n." target="_blank" aria-label="WhatsApp">✆</a>
 
   <footer>© 2026 MOCHIMED S.A.C. | Protección radiológica e ingeniería especializada</footer>
 </body>
