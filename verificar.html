@@ -75,6 +75,34 @@
       border-radius: 6px;
       display: inline-block;
     }
+    .actions {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 10px;
+      background: var(--azul);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(22,45,74,0.16);
+    }
+    .btn.secondary {
+      background: #ffffff;
+      color: var(--azul);
+      border: 1px solid #c9d3df;
+      box-shadow: none;
+    }
+    .notice {
+      margin-top: 14px;
+      color: var(--gris);
+      font-size: 13px;
+      line-height: 1.5;
+    }
     .footer {
       margin-top: 28px;
       padding-top: 16px;
@@ -88,6 +116,8 @@
       .container { margin: 16px; padding: 22px; }
       .row { grid-template-columns: 1fr; gap: 4px; }
       .brand { font-size: 24px; }
+      .actions { display: block; }
+      .btn { display: block; text-align: center; margin-bottom: 10px; }
     }
   </style>
 </head>
@@ -115,6 +145,20 @@
       return String(value ?? "").replace(/[&<>"']/g, function (m) {
         return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" })[m];
       });
+    }
+
+    function buildDownloadButton(c) {
+      if (!c.archivo_constancia) return "";
+      const archivo = escapeHTML(c.archivo_constancia);
+      return `
+        <div class="actions">
+          <a class="btn" href="${archivo}" download>Descargar constancia</a>
+          <a class="btn secondary" href="${archivo}" target="_blank" rel="noopener">Ver constancia</a>
+        </div>
+        <div class="notice">
+          La descarga corresponde al archivo PNG registrado para este código de verificación.
+        </div>
+      `;
     }
 
     if (!id) {
@@ -149,6 +193,8 @@
               <div class="row"><div class="label">Lugar / sede</div><div>${escapeHTML(c.lugar)}</div></div>
               <div class="row"><div class="label">Fecha de emisión</div><div>${escapeHTML(c.fecha_emision)}</div></div>
               <div class="row"><div class="label">Estado</div><div>${escapeHTML(c.estado)}</div></div>
+
+              ${buildDownloadButton(c)}
             `;
           } else {
             resultado.innerHTML = `
