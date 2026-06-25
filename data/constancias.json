@@ -9,6 +9,7 @@
     "lugar": "Centro de Medicina Nuclear SPECTRA - Cusco",
     "fecha_emision": "25 de junio de 2026",
     "estado": "VÁLIDA",
+    "archivo_constancia": "constancias/MN-CUSCO-2026-001.png",
     "url_verificacion": "https://www.mochimed.com.pe/verificar.html?id=MN-CUSCO-2026-001"
   },
   {
@@ -21,6 +22,7 @@
     "lugar": "Centro de Medicina Nuclear SPECTRA - Cusco",
     "fecha_emision": "25 de junio de 2026",
     "estado": "VÁLIDA",
+    "archivo_constancia": "constancias/MN-CUSCO-2026-002.png",
     "url_verificacion": "https://www.mochimed.com.pe/verificar.html?id=MN-CUSCO-2026-002"
   },
   {
@@ -33,6 +35,7 @@
     "lugar": "Centro de Medicina Nuclear SPECTRA - Cusco",
     "fecha_emision": "25 de junio de 2026",
     "estado": "VÁLIDA",
+    "archivo_constancia": "constancias/MN-CUSCO-2026-003.png",
     "url_verificacion": "https://www.mochimed.com.pe/verificar.html?id=MN-CUSCO-2026-003"
   },
   {
@@ -45,6 +48,7 @@
     "lugar": "Centro de Medicina Nuclear SPECTRA - Cusco",
     "fecha_emision": "25 de junio de 2026",
     "estado": "VÁLIDA",
+    "archivo_constancia": "constancias/MN-CUSCO-2026-004.png",
     "url_verificacion": "https://www.mochimed.com.pe/verificar.html?id=MN-CUSCO-2026-004"
   },
   {
@@ -57,6 +61,7 @@
     "lugar": "Centro de Medicina Nuclear SPECTRA - Cusco",
     "fecha_emision": "25 de junio de 2026",
     "estado": "VÁLIDA",
+    "archivo_constancia": "constancias/MN-CUSCO-2026-005.png",
     "url_verificacion": "https://www.mochimed.com.pe/verificar.html?id=MN-CUSCO-2026-005"
   },
   {
@@ -69,6 +74,7 @@
     "lugar": "Centro de Medicina Nuclear SPECTRA - Cusco",
     "fecha_emision": "25 de junio de 2026",
     "estado": "VÁLIDA",
+    "archivo_constancia": "constancias/MN-CUSCO-2026-006.png",
     "url_verificacion": "https://www.mochimed.com.pe/verificar.html?id=MN-CUSCO-2026-006"
   },
   {
@@ -81,6 +87,7 @@
     "lugar": "Centro de Medicina Nuclear SPECTRA - Cusco",
     "fecha_emision": "25 de junio de 2026",
     "estado": "VÁLIDA",
+    "archivo_constancia": "constancias/MN-CUSCO-2026-007.png",
     "url_verificacion": "https://www.mochimed.com.pe/verificar.html?id=MN-CUSCO-2026-007"
   }
 ]
