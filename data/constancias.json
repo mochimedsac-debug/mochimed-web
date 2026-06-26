@@ -8,9 +8,10 @@
     "duracion": "1 hora cronológica",
     "lugar": "Centro de Medicina Nuclear SPECTRA - Cusco",
     "fecha_emision": "25 de junio de 2026",
+    "entidad": "MOCHIMED",
+    "firmante": "Zintia Milagros Arqque Meza",
     "estado": "VÁLIDA",
-    "archivo_constancia": "constancias/MN-CUSCO-2026-001.png",
-    "url_verificacion": "https://www.mochimed.com.pe/verificar.html?id=MN-CUSCO-2026-001"
+    "preview": "previews/MN-CUSCO-2026-001.jpg"
   },
   {
     "codigo": "MN-CUSCO-2026-002",
@@ -21,9 +22,10 @@
     "duracion": "1 hora cronológica",
     "lugar": "Centro de Medicina Nuclear SPECTRA - Cusco",
     "fecha_emision": "25 de junio de 2026",
+    "entidad": "MOCHIMED",
+    "firmante": "Zintia Milagros Arqque Meza",
     "estado": "VÁLIDA",
-    "archivo_constancia": "constancias/MN-CUSCO-2026-002.png",
-    "url_verificacion": "https://www.mochimed.com.pe/verificar.html?id=MN-CUSCO-2026-002"
+    "preview": "previews/MN-CUSCO-2026-002.jpg"
   },
   {
     "codigo": "MN-CUSCO-2026-003",
@@ -34,9 +36,10 @@
     "duracion": "1 hora cronológica",
     "lugar": "Centro de Medicina Nuclear SPECTRA - Cusco",
     "fecha_emision": "25 de junio de 2026",
+    "entidad": "MOCHIMED",
+    "firmante": "Zintia Milagros Arqque Meza",
     "estado": "VÁLIDA",
-    "archivo_constancia": "constancias/MN-CUSCO-2026-003.png",
-    "url_verificacion": "https://www.mochimed.com.pe/verificar.html?id=MN-CUSCO-2026-003"
+    "preview": "previews/MN-CUSCO-2026-003.jpg"
   },
   {
     "codigo": "MN-CUSCO-2026-004",
@@ -47,9 +50,10 @@
     "duracion": "1 hora cronológica",
     "lugar": "Centro de Medicina Nuclear SPECTRA - Cusco",
     "fecha_emision": "25 de junio de 2026",
+    "entidad": "MOCHIMED",
+    "firmante": "Zintia Milagros Arqque Meza",
     "estado": "VÁLIDA",
-    "archivo_constancia": "constancias/MN-CUSCO-2026-004.png",
-    "url_verificacion": "https://www.mochimed.com.pe/verificar.html?id=MN-CUSCO-2026-004"
+    "preview": "previews/MN-CUSCO-2026-004.jpg"
   },
   {
     "codigo": "MN-CUSCO-2026-005",
@@ -60,9 +64,10 @@
     "duracion": "1 hora cronológica",
     "lugar": "Centro de Medicina Nuclear SPECTRA - Cusco",
     "fecha_emision": "25 de junio de 2026",
+    "entidad": "MOCHIMED",
+    "firmante": "Zintia Milagros Arqque Meza",
     "estado": "VÁLIDA",
-    "archivo_constancia": "constancias/MN-CUSCO-2026-005.png",
-    "url_verificacion": "https://www.mochimed.com.pe/verificar.html?id=MN-CUSCO-2026-005"
+    "preview": "previews/MN-CUSCO-2026-005.jpg"
   },
   {
     "codigo": "MN-CUSCO-2026-006",
@@ -73,9 +78,10 @@
     "duracion": "1 hora cronológica",
     "lugar": "Centro de Medicina Nuclear SPECTRA - Cusco",
     "fecha_emision": "25 de junio de 2026",
+    "entidad": "MOCHIMED",
+    "firmante": "Zintia Milagros Arqque Meza",
     "estado": "VÁLIDA",
-    "archivo_constancia": "constancias/MN-CUSCO-2026-006.png",
-    "url_verificacion": "https://www.mochimed.com.pe/verificar.html?id=MN-CUSCO-2026-006"
+    "preview": "previews/MN-CUSCO-2026-006.jpg"
   },
   {
     "codigo": "MN-CUSCO-2026-007",
@@ -86,8 +92,9 @@
     "duracion": "1 hora cronológica",
     "lugar": "Centro de Medicina Nuclear SPECTRA - Cusco",
     "fecha_emision": "25 de junio de 2026",
+    "entidad": "MOCHIMED",
+    "firmante": "Zintia Milagros Arqque Meza",
     "estado": "VÁLIDA",
-    "archivo_constancia": "constancias/MN-CUSCO-2026-007.png",
-    "url_verificacion": "https://www.mochimed.com.pe/verificar.html?id=MN-CUSCO-2026-007"
+    "preview": "previews/MN-CUSCO-2026-007.jpg"
   }
 ]
